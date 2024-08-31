@@ -1,0 +1,76 @@
+/* Navbar styles */
+.navbar-nav .nav-item {
+    margin-left: 10px; /* Space between items */
+    border-radius: 5px; 
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.navbar-nav .nav-item:hover {
+    transform: translateY(-5px); /* Moves item up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for a lifting effect */
+}
+/* General styles for the tour box */
+.tour-box {
+    position: relative; /* Ensure that child elements are positioned relative to this container */
+    background-color: #fff; /* Set a background color if needed */
+    border-radius: 5px; /* Optional: rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for the box */
+}
+
+/* Styles for the tour image container */
+/* General styles for the tour box */
+.tour-box {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 100%; /* Ensure full height for each box */
+}
+
+/* Styles for the tour image container */
+.tour-image {
+    position: relative;
+}
+
+.tour-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ensure text content fits well */
+.tour-content {
+    padding: 10px;
+}
+
+/* Adjust tour title font size */
+.tour-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Adjust pricing and time information */
+.tour-price,
+.price-old {
+    font-size: 14px;
+}
+
+/* Read more link style */
+.readmore a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .tour-box {
+        height: auto; /* Adjust height for smaller screens */
+    }
+}

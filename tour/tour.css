@@ -1,0 +1,193 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Spacer to push down content */
+.navbar-spacer {
+  height: 100px; /* Adjust this value to match the height of the navbar */
+}
+
+/* Navbar items */
+.navbar-nav {
+  margin-right: 7rem; /* Reset margin if not needed */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Adjust this value as needed */
+}
+
+.navbar-nav .nav-item .nav-link {
+  transition: transform 0.3s, text-shadow 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for navbar items except 'Trang chủ' */
+.navbar-nav .nav-item:not(.home-link):hover .nav-link,
+.navbar-nav .nav-item:not(.home-link) .nav-link.active {
+  transform: translateY(-3px); /* Moves text up */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow to give a "pop-up" effect */
+  color: #ff69b4; /* Changes font color to pink on hover */
+}
+
+/* Ensure 'Trang chủ' does not change color on hover */
+.navbar-nav .nav-item.home-link .nav-link {
+  color: inherit; /* Keeps the default color */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0rem; /* Increased spacing from the parent item */
+  border-radius: 0.25rem;
+  z-index: 1000;
+}
+
+/* Positioning the submenu to the right */
+.dropdown-menu-end {
+  left: 100%;
+  margin-left: 0.25rem; /* Increased spacing between submenu and parent */
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Show submenu on hover */
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+  top: 0; /* Adjust top position if needed */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+  transform: translateY(-2px); /* Moves text up */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Adds shadow to give a "pop-up" effect */
+  color: #ff69b4; /* Changes font color to pink on hover (HotPink) */
+}
+
+/* Styles for the tour box */
+.container {
+  margin-top: 100px;
+}
+
+.tour-box {
+  position: relative; /* Ensure that child elements are positioned relative to this container */
+  background-color: #fff; /* Set a background color if needed */
+  border-radius: 5px; /* Optional: rounded corners for the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for the box */
+  margin-bottom: 20px; /* Space between tour boxes */
+}
+
+/* Styles for the tour image container */
+.tour-image {
+  position: relative;
+}
+
+.tour-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Ensure text content fits well */
+.tour-content {
+  padding: 10px;
+}
+
+/* Adjust tour title font size */
+.tour-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Adjust pricing and time information */
+.tour-price,
+.price-old {
+  font-size: 14px;
+}
+
+/* Read more link style */
+.readmore a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .tour-box {
+    height: auto; /* Adjust height for smaller screens */
+  }
+}
+/* Ensure all tour boxes have enough height and prevent overflow */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tour-box {
+  position: relative; /* Ensure that child elements are positioned relative to this container */
+  background-color: #fff; /* Set a background color if needed */
+  border-radius: 5px; /* Optional: rounded corners for the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for the box */
+  margin-bottom: 20px; /* Space between tour boxes */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  height: 350px; /* Increased height for consistency */
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+.tour-box:hover {
+  transform: translateY(-5px); /* Moves the box up */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increases shadow for the pop-up effect */
+}
+
+/* Styles for the tour image container */
+.tour-image {
+  position: relative;
+  height: 60%; /* Adjust height relative to the container */
+  overflow: hidden; /* Ensures the image does not overflow */
+}
+
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Ensure text content fits well */
+.tour-content {
+  padding: 10px;
+  height: 40%; /* Adjust height relative to the container */
+  box-sizing: border-box; /* Includes padding in height calculation */
+  overflow: hidden; /* Prevents text from overflowing */
+}
+
+/* Adjust tour title font size */
+.tour-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Adjust pricing and time information */
+.tour-price,
+.price-old {
+  font-size: 14px;
+}
+
+/* Read more link style */
+.readmore a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .tour-box {
+    height: auto; /* Adjust height for smaller screens */
+  }
+}

@@ -1,0 +1,33 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar items */
+.navbar-nav {
+  margin-right: 7.0rem; /* Reset margin if not needed */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Adjust this value as needed */
+}
+
+.navbar-nav .nav-item .nav-link {
+  transition: transform 0.3s, text-shadow 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for navbar items */
+.navbar-nav .nav-item:hover .nav-link,
+.navbar-nav .nav-item .nav-link.active {
+  transform: translateY(-3px); /* Moves text up */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow to give a "pop-up" effect */
+  color: #ff69b4; /* Changes font color to pink on hover */
+}
+
+/* Ensure 'Trang chủ' does not change color on hover */
+.navbar-nav .nav-item.home-link .nav-link {
+  color: inherit; /* Keeps the default color */
+}
