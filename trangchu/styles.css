@@ -31,3 +31,6 @@
 .navbar-nav .nav-item.home-link .nav-link {
   color: inherit; /* Keeps the default color */
 }
+.navbar-spacer {
+  height: 200px;
+}
